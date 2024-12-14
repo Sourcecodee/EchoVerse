@@ -10,15 +10,15 @@
 const Couple = () => {
   return (
     <div className='overflow-hidden'>
-        {/* <Hero/> */}
-        {/* <DropDown/> */}
-        {/* <About/> */}
-        {/* <Blog/> */}
-        {/* <Songs/> */}
-        {/* <SongCard/> */}
-        {/* <Contact/> */}
+      {/* <Hero/> */}
+      {/* <DropDown/> */}
+      {/* <About/> */}
+      {/* <Blog/> */}
+      {/* <Songs/> */}
+      {/* <SongCard/> */}
+      {/* <Contact/> */}
     </div>
-  )
-}
+  );
+};
 
-export default Couple
+export default Couple;

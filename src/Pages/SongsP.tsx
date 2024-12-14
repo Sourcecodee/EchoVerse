@@ -1,12 +1,11 @@
-import Songs from "../Components/Songs"
-
+import Songs from '../Components/Songs';
 
 const SongsP = () => {
   return (
     <div>
-        <Songs/>
+      <Songs />
     </div>
-  )
-}
+  );
+};
 
-export default SongsP
+export default SongsP;

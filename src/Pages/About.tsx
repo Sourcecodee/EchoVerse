@@ -1,11 +1,11 @@
-import About from "../Components/About"
+import About from '../Components/About';
 
 const AboutP = () => {
   return (
     <div>
-        <About/>
+      <About />
     </div>
-  )
-}
+  );
+};
 
-export default AboutP
+export default AboutP;

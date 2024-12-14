@@ -1,12 +1,11 @@
-import Contact from "../Components/Contact"
-
+import Contact from '../Components/Contact';
 
 const ContactP = () => {
   return (
     <div>
-        <Contact/>
+      <Contact />
     </div>
-  )
-}
+  );
+};
 
-export default ContactP
+export default ContactP;
