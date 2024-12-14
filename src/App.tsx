@@ -9,8 +9,25 @@ import "@fontsource/playwrite-es/400.css"; // Specify weight
 import "@fontsource/merienda/400.css"; // Specify weight
 import "@fontsource/roboto/400.css"; // Specify weight
 import DropDown from './Components/DropDown';
+import { useRef, useState} from 'react';
+import { gsap } from 'gsap';
+import { AuthContext } from './Components/Context/authContext';
+
+
 
 function App() {
+
+  const [dropDown, setDropDown] = useState<boolean>(false)
+  
+  const dropDownRef = useRef(null);
+
+  // GSAP dropdwon animation
+  if(dropDown){
+    gsap.to(dropDownRef.current, {duration: 1, opacity: 1, height: '100%', z: 20});
+  }
+  else{
+    gsap.to(dropDownRef.current, {duration: 1, opacity: 0, z: 0});
+  };
 
   // routes created to navigate the web app
   const router = createBrowserRouter(
@@ -29,15 +46,19 @@ function App() {
 
   return (
     <>
-      <div style={{fontFamily: 'merienda',position: 'relative'}}>
-        {/* setting the router */}
-        <div className='w-[100%] h-screen z-10' style={{position: 'absolute'}}>
-            <RouterProvider router={router}/>
+      <AuthContext.Provider value={{setDropDown, dropDown}}>
+        <div style={{fontFamily: 'merienda', position: 'relative'}}>
+          {/* setting the router */}
+          <div className='w-[100%] h-[100%]' style={{position: 'absolute'}}>
+              <RouterProvider router={router}/>
+          </div>
+
+          {/* I encountered conflict(it freezes the app) with dropdown until i set display to condtionally show when dropdown is true*/}
+          <div ref={dropDownRef} className='w-[100%] h-screen' style={{position: 'absolute', zIndex: 20, opacity: 0, display: dropDown ? 'block' : 'none'}}>
+              <DropDown/>
+          </div>
         </div>
-        <div className='w-[100%] h-screen' style={{position: 'absolute'}}>
-            <DropDown/>
-        </div>
-      </div>
+      </AuthContext.Provider>
     </>
   )
 }
