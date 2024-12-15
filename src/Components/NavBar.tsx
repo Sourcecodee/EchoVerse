@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useContext, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import { AuthContext } from './Context/authContext';
+import { AuthContext } from '../Context/authContext';
 
 // navBar component
 const NavBar = () => {

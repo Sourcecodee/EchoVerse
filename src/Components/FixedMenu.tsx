@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { AuthContext } from './Context/authContext';
+import { AuthContext } from '../Context/authContext';
 import { useContext } from 'react';
 
 const FixedMenu = () => {

@@ -30,6 +30,7 @@ const Card = () => {
       <p className='text-xs'>Artist</p>
 
       <div className='w-full flex justify-between mt-4'>
+
         <div>
           <img src={Play} alt='play' />
         </div>

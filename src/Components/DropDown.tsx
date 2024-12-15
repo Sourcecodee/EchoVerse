@@ -1,8 +1,11 @@
 import Headphone from '../assets/headphone.png';
-import { AuthContext } from './Context/authContext';
+import { AuthContext } from '../Context/authContext';
 import { useContext } from 'react';
 
+
+
 const DropDown = () => {
+
   const { dropDown, setDropDown } = useContext(AuthContext);
 
   const setValue = () => {

@@ -1,4 +1,3 @@
-// import Couple from "./Components/Couple"
 import {
   createBrowserRouter,
   Route,
@@ -16,7 +15,7 @@ import '@fontsource/roboto/400.css'; // Specify weight
 import DropDown from './Components/DropDown';
 import { useRef, useState } from 'react';
 import { gsap } from 'gsap';
-import { AuthContext } from './Components/Context/authContext';
+import { AuthContext } from './Context/authContext';
 
 function App() {
   const [dropDown, setDropDown] = useState<boolean>(false);
