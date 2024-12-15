@@ -3,7 +3,12 @@ import { AuthContext } from '../Context/authContext';
 import { useContext } from 'react';
 
 const FixedMenu = () => {
-  const { dropDown, setDropDown } = useContext(AuthContext);
+  type Confirm = {
+    dropDown: boolean;
+    setDropDown: React.Dispatch<React.SetStateAction<boolean>>;
+  };
+
+  const { dropDown, setDropDown } = useContext(AuthContext) as Confirm;
 
   const setValue = () => {
     setDropDown(!dropDown);

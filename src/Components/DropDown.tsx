@@ -2,11 +2,13 @@ import Headphone from '../assets/headphone.png';
 import { AuthContext } from '../Context/authContext';
 import { useContext } from 'react';
 
-
-
 const DropDown = () => {
+  type Confirm = {
+    dropDown: boolean;
+    setDropDown: React.Dispatch<React.SetStateAction<boolean>>;
+  };
 
-  const { dropDown, setDropDown } = useContext(AuthContext);
+  const { dropDown, setDropDown } = useContext(AuthContext) as Confirm;
 
   const setValue = () => {
     setDropDown(!dropDown);
