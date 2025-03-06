@@ -7,7 +7,7 @@ import Card from './Card';
 const Hero = () => {
   return (
     <div
-      className='overflow-hidden h-screen w-full bg-cover bg-top bg-no-repeat container mx-auto md:px-14 py-7 flex flex-col justify-between'
+      className='overflow-hidden container sm:max-w-full md:max-w-full lg:max-w-full h-screen w-full bg-cover bg-top bg-no-repeat mx-auto md:px-14 py-7 flex flex-col justify-between'
       style={{ backgroundImage: `url(${Singer})` }}
     >
       {/* container for navBar */}

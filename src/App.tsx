@@ -51,9 +51,9 @@ function App() {
   return (
     <>
       <AuthContext.Provider value={{ setDropDown, dropDown }}>
-        <div style={{ fontFamily: "merienda", position: "relative" }}>
+        <div className="w-[100%] h-[100%]" style={{ fontFamily: "merienda"}}>
           {/* setting the router */}
-          <div className="w-[100%] h-[100%]" style={{ position: "absolute" }}>
+          <div className="w-[100%] h-[100%] bg-yellow-700" style={{ position: "absolute"}}>
             <RouterProvider router={router} />
           </div>
 

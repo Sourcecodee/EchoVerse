@@ -15,7 +15,7 @@ const DropDown = () => {
   };
 
   return (
-    <div className='overflow-hidden h-screen w-full bg-black container mx-auto md:px-14 py-7 flex flex-col justify-between'>
+    <div className='overflow-hidden h-screen w-full bg-black container sm:max-w-full md:max-w-full lg:max-w-full mx-auto md:px-14 py-7 flex flex-col justify-between'>
       {/* container for navBar */}
       <div className='flex flex-row justify-between items-center h-auto'>
         {/* left text */}
